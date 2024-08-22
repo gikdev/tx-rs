@@ -54,12 +54,12 @@ fn parse_config(args: &[String]) -> Result<Config, &'static str> {
 
     let is_action_available = AVAILABLE_ACTIONS.contains(&action.as_str());
     if !is_action_available {
-        return Err("We currently support only the `create` command!");
+        return Err("We currently only support the `create` command!");
     }
 
     let is_kind_available = AVAILABLE_KINDS.contains(&kind.as_str());
     if !is_kind_available {
-        return Err("We currently support only `components`!");
+        return Err("We currently only support `components` & `routes`!");
     }
 
     let config = Config { action, kind, name };
