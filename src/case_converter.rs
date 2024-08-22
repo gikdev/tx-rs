@@ -1,4 +1,5 @@
 /// Converts a string to PascalCase.
+#[allow(dead_code)]
 pub fn kebab_to_pascal(input: &str) -> String {
     input
         .split_whitespace() // Split the input by whitespace
